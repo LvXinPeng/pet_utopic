@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pet_utopic.dao.PetKeepMapper" >
+	<resultMap type="com.pet_utopic.model.PetForKeep" id="allpetforkeep">
+		<id column="pet_id" property="petId" />
+		<result column="own_id" property="onwerId" />
+		<result column="pet_name" property="petName" />
+		<result column="varity" property="vatiety" />
+		<result column="start_date" property="startDate" />
+		<result column="end_date" property="endDate" />
+		<result column="price" property="price" />
+		<result column="pet_info" property="petInfo" />
+		<result column="photo" property="petPhoto" />
+	</resultMap>
+  <insert id="createPetForKeep" parameterType="com.pet_utopic.model.PetForKeep">
+  insert into pet values(null,1,#{petName},#{variety},#{startDate},#{endDate},#{price},#{petInfo},#{petPhoto})
+  </insert>
+  <update id="updatePetForKeep" parameterType="com.pet_utopic.model.PetForKeep">
+  update pet set pet_name = #{petName}, variety = #{variety},start_date=#{startDate},end_date=#{endDate},price=#{price},
+  pet_info=#{petInfo} where own_id = #{onwerId}
+  </update>
+  <delete id="" parameterType="com.pet_utopic.model.PetForKeep">
+  	delete from pet where pet_id = #{petid}
+  </delete>
+<select id="getAllPetForKeep" resultMap="allpetforkeep"  >
+    SELECT * FROM pet
+    
+  </select>
+  </mapper>
