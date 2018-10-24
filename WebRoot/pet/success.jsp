@@ -13,7 +13,6 @@ request.setAttribute("basePath", basePath);
 <title>头像</title>  
 </head>  
 <body> 
-sdfsf
-<img src="../b.jpg"> sffsdfsdf 
+添加成功！<a href="pet/getallproducts.do">点击返回</a>
 </body>  
 </html>  

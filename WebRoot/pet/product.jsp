@@ -98,7 +98,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</ul>
 						</li>				
 						
-						
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">宠物兔子<b class="caret"></b></a></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">爬行宠物<b class="caret"></b></a></li>
+					<li class="dropdown"><a href="add.jsp">发布寄养信息<b class="caret"></b></a></li>
 					</ul> 
 					<!--/.navbar-collapse-->
 				</div>
